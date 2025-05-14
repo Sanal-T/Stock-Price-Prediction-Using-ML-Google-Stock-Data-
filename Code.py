@@ -5,6 +5,9 @@ import seaborn as sns
 from sklearn import metrics
 
 df=pd.read_csv('GOOG.csv')
-df.head()
 
 df.info()
+
+df.shape
+df=df.drop(columns=['symbol','adjClose','adjHigh','adjLow','adjOpen','adjOpen','divCash','splitFactor'],axis=1)
+df.head()
