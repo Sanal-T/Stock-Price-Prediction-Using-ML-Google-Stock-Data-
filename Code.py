@@ -18,3 +18,8 @@ import plotly.graph_objects as go
 figure=go.Figure(data=[go.Candlestick(x=df['date'],open=df['open'],high=df['high'],low=df['low'],close=df['close'])])
 figure.update_layout(title='GOOG',xaxis_rangeslider_visible=False)
 figure.show()
+
+df=df.drop(columns=['date'],axis=1)
+df.head()
+
+df.duplicated().sum().any()
