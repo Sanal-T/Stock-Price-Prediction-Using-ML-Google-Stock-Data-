@@ -23,3 +23,5 @@ df=df.drop(columns=['date'],axis=1)
 df.head()
 
 df.duplicated().sum().any()
+df.isnull().values.any()
+df.describe()
