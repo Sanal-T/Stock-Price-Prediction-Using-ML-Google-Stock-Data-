@@ -25,3 +25,9 @@ df.head()
 df.duplicated().sum().any()
 df.isnull().values.any()
 df.describe()
+
+print(df.corr())
+
+plt.figure(figsize=(16,8))
+sns.heatmap(df.corr(),cmap='Blues',annot=True)
+plt.show()
