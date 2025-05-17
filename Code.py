@@ -42,3 +42,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, accuracy_score,f1_score
+
+label_encoder = LabelEncoder()
+df['open'] = label_encoder.fit_transform(df['open'])
+df['high'] = label_encoder.fit_transform(df['high'])
+df['low'] = label_encoder.fit_transform(df['low'])
+correlation_matrix = df.corr()
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=.5)
+plt.title('Correlation Matrix')
+plt.show()
