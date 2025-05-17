@@ -33,3 +33,7 @@ sns.heatmap(df.corr(),cmap='Blues',annot=True)
 plt.show()
 
 sns.pairplot(df)
+
+df['open'].hist()
+
+df['close'].hist()
