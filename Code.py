@@ -52,3 +52,6 @@ plt.figure(figsize=(10, 8))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=.5)
 plt.title('Correlation Matrix')
 plt.show()
+
+x=df[['open','high','low','volume']].values
+y=df['close'].values
