@@ -31,3 +31,5 @@ print(df.corr())
 plt.figure(figsize=(16,8))
 sns.heatmap(df.corr(),cmap='Blues',annot=True)
 plt.show()
+
+sns.pairplot(df)
