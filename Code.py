@@ -37,3 +37,8 @@ sns.pairplot(df)
 df['open'].hist()
 
 df['close'].hist()
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, accuracy_score,f1_score
