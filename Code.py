@@ -55,3 +55,5 @@ plt.show()
 
 x=df[['open','high','low','volume']].values
 y=df['close'].values
+
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=0)
