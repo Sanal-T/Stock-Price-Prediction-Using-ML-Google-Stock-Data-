@@ -71,3 +71,9 @@ predicted = model.predict(x_test)
 
 print('Model Coefficients:',regressor.coef_)
 print('Model intercept:',regressor.intercept_)
+
+dframe=pd.DataFrame(y_test,predicted)
+dfr=pd.DataFrame({'Actual_Price':y_test,'Predicted_Price':predicted})
+print(dfr)
+residual=y_test-predicted
+sns.distplot(residual)
