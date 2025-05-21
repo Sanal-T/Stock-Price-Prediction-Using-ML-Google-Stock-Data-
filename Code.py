@@ -66,3 +66,5 @@ from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 model=regressor.fit(x_train,y_train)
 y_pred=regressor.predict(x_test)
+
+predicted = model.predict(x_test)
